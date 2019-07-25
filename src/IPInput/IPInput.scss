@@ -1,0 +1,35 @@
+
+@import "../scss/index";
+  
+
+.ipInput{
+    display: inline-block;
+    border: 1px solid $control-border-color;
+    padding: 5px;
+    text-align: center;
+
+    &:hover{
+        @include control-box-shadow;
+    }
+
+    &:focus, &:focus-within{
+        border-color: $focus-color;
+        @include control-box-shadow;
+    }
+
+    &_error, &_error:hover, &_error:active, 
+    &_error:focus, &_error:focus-within{
+        border-color: $warning-color;
+    }
+
+    &__item{
+        @extend %reset-input;
+        width: 30px;
+        text-align: center;
+    }
+
+    &__dot{
+        @extend %reset-i;
+    }
+
+}

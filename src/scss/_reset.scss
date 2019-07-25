@@ -1,0 +1,17 @@
+%reset{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: inherit;
+}
+
+%reset-input{
+    @extend %reset;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+%reset-i{
+    @extend %reset;
+    vertical-align: baseline;
+}
