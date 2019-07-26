@@ -8,7 +8,13 @@
     "prebuild": "rimraf ./build",
     "build": "webpack --config webpack.config.prod.js --mode production",
     "prepublishOnly": "npm run build",
-    "test": "jest --watch "
+    "test": "jest",
+    "test:watch": "jest --watch "
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test"
+    }
   },
   "keywords": [
     "react",
@@ -37,6 +43,7 @@
     "eslint-loader": "^2.2.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-react": "^7.14.3",
+    "ghooks": "^2.0.4",
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
